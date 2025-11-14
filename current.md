@@ -11,9 +11,10 @@
 - **FR-01:** System shall search and compare recipes from database based on ingredient composition and percentage amounts.
 
 **Compare recipes based on ingredient composition and percentages**
-- **FR-02:** System shall match ingredients by article number (exact match) and ingredient name (semantic similarity).
+- **FR-02:** System shall match ingredients by Material_ID (article number) for exact identification.
+- **FR-02a:** System shall calculate ingredient overlap ratio between recipe pairs.
 - **FR-03:** System shall support hierarchical recipe structures (Vormischungen/pre-mixes) with option to compare at same level or exploded to base ingredients.
-- **FR-04:** System shall calculate similarity scores based on percentage differences per ingredient.
+- **FR-04:** System shall calculate per-ingredient percentage similarity scores.
 
 **Present similarity rankings to enable manual harmonization decisions**
 - **FR-05:** System shall output similarity rankings (not binary yes/no) showing percentage match scores between recipe pairs.
@@ -21,11 +22,11 @@
 
 **Reduce production complexity by consolidating redundant recipes**
 - **FR-07:** System shall filter recipes by special ingredient attributes (VLOG, TK/Tiefkühl, Bio, Halal, Kosher).
-- **FR-08:** System shall support ingredient substitutability matching (e.g., grouping Paprika variants, Pfeffer variants).
+- **FR-08:** System shall identify unmatched ingredients sharing the same resource category (Rohstoffkategorie) for potential substitution matching.
 - **FR-09:** System shall support material group categories (M-prefix purchasing-oriented groups).
 
 **Search based on ingredient names, article numbers, and percentage compositions**
-- **FR-10:** System shall allow adjustable similarity tolerance thresholds for percentage-based matching (e.g., 2%, 5%, 10%).
+- **FR-10:** System shall use configurable threshold parameters for similarity calculations.
 - **FR-11:** System shall validate POC functionality with subset of ~100 recipes before scaling to full ~8000 recipe database.
 
 ### Deferred (Post-POC)
@@ -47,7 +48,7 @@
 
 **Production Optimization - Batch size and production quantity optimization**
 - **FR-19:** System shall calculate optimal batch sizes to minimize partial containers for priority ingredients (TK, Tomatenmark, etc.).
-- **FR-20:** System shall adjust recipe quantities within tolerance ranges (±3-10% per ingredient) for full container utilization.
+- **FR-20:** System shall adjust recipe quantities within tolerance ranges for full container utilization.
 
 **Production Optimization - Full container utilization optimization**
 - **FR-21:** System shall optimize for full container usage of specified priority raw materials.
