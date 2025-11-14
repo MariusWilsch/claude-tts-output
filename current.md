@@ -1,13 +1,13 @@
-## Section 2: Goal Determination (Zielbestimmung)
+## Section 2: Goal Determination
 
 ### Must (POC Scope)
-- ⚠️ **Website with landing page** for Klimafolgenschutzverein targeting municipalities *(MEDIUM - need pages/branding detail)*
-- ❌ **Interactive questionnaire** to capture project details *(LOW - structure undefined, client stated "need to define")*
-- ✅ **AI-powered semantic search** of funding databases (Förderdatenbank, KfW, BAFA, EU sources) *(HIGH - clear requirement)*
-- ✅ **Display of relevant funding programs** with estimated amounts and percentages *(HIGH - clear output format)*
-- ❌ **Package-based categorization** for standardized projects *(LOW - concept only, no package definitions)*
-- ⚠️ **Lead generation flow** directing to association membership application *(MEDIUM - goal clear, form fields undefined)*
-- ⚠️ **Data capture** for follow-up consultation *(MEDIUM - purpose clear, specific fields undefined)*
+- Website with landing page for Klimafolgenschutzverein targeting municipalities
+- Interactive questionnaire to capture project details (type, scope, budget, municipality info)
+- AI-powered semantic search of funding databases (Förderdatenbank, KfW, BAFA, EU sources)
+- Display of relevant funding programs with estimated amounts and percentages
+- Package-based categorization for standardized projects (digitalization, climate protection, infrastructure)
+- Lead generation flow directing to association membership application
+- Data capture for follow-up consultation
 
 ### Deferred (Post-POC)
 - Document upload capability (cost estimates, planning documents from architects)
@@ -22,9 +22,38 @@
 - Manual processing of individual edge cases
 - Physical distribution materials or regional office setup
 
----
+### Outstanding Requirements Definition
 
-**Legend:**
-- ✅ **HIGH Confidence** - Can estimate accurately
-- ⚠️ **MEDIUM Confidence** - Can estimate with assumptions
-- ❌ **LOW Confidence** - Requires Workshop 2 clarification
+**Items Requiring Workshop 2 Clarification:**
+
+**Website Scope (MEDIUM Priority):**
+- Number of pages and site structure
+- Branding assets (logo, colors, style guide)
+- Content/copywriting responsibility and approval process
+- Design complexity level and reference examples
+- Municipality targeting messaging and positioning
+
+**Questionnaire Structure (HIGH Priority):**
+- Exact questions and field types (dropdown, text, number)
+- Conditional logic and branching rules
+- Number of steps/screens in user flow
+- Validation requirements and error handling
+- Client explicitly stated: "we need to define together"
+
+**Package Categorization (HIGH Priority):**
+- Definition criteria (budget ranges, municipality size, employee count)
+- Total number of packages to support
+- Differentiation fields per package type
+- Example packages with concrete specifications
+- Currently only conceptual - no detailed specifications provided
+
+**Funding Database Integration (MEDIUM Priority):**
+- Integration sequence (all sources at once vs phased approach)
+- API availability vs web scraping requirements
+- Data freshness and update frequency needs
+- Which funding sources are MVP-critical vs nice-to-have
+
+**Lead Data Capture (LOW Priority):**
+- Specific form fields required (municipality name, contact, project details)
+- Essential vs optional data points
+- Storage mechanism and follow-up workflow integration
