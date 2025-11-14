@@ -1,39 +1,62 @@
-## Section 8: Domain Glossary
+## Section 8: Domain Glossary (Fachbegriffe)
 
-### Key Terms
+**Understanding:**
+- Specialized food production and technical terminology
+- German terms with English translations
+- Organized by category
 
-**Fördermittel**
-- Government subsidies or grants provided to municipalities for public projects.
+### Recipe Structure Terms
 
-**Förderdatenbank**
-- Central German database containing information about available funding programs from various sources.
+**Vormischungen (Pre-mixes)**  
+Intermediate products marked with "V" prefix that have their own recipes and are used as ingredients in final products.
 
-**Gemeinde**
-- Municipality or local government entity in Germany.
+**Baukasten (Modular Structure)**  
+Hierarchical recipe system where recipes can contain other recipes as components.
 
-**KfW (Kreditanstalt für Wiederaufbau)**
-- German state-owned development bank providing subsidized loans and grants for infrastructure and climate projects.
+**Herstellvorschrift (Manufacturing Instruction)**  
+Recipe specification defining ingredients and their proportions.
 
-**BAFA (Bundesamt für Wirtschaft und Ausfuhrkontrolle)**
-- Federal Office for Economic Affairs and Export Control, manages various funding programs.
+**Ansatzgröße (Batch Size)**  
+Production quantity for a single manufacturing run.
 
-**EE-Mann (Energieeffizienz-Experte)**
-- Energy efficiency expert required to validate and approve certain climate/building projects for funding eligibility.
+### Ingredient Classification
 
-**Klimafolgenschutzverein**
-- Climate Impact Protection Association (client organization), supports municipalities in accessing climate-related funding.
+**Material_ID (Article Number)**  
+Unique identifier for ingredients and components in the database.
 
-**Bürgermeister**
-- Mayor of a municipality, key decision-maker for project approvals.
+**Rohstoffkategorie (Resource Category)**  
+Functional grouping of ingredients for substitution matching (e.g., "Gewürze/Paprika" for all paprika variants).
 
-**Kämmerer**
-- Municipal treasurer, responsible for financial planning and budget management.
+**Materialgruppe (Material Group)**  
+Purchasing-oriented ingredient categories (M-prefix).
 
-**Digitalisierung**
-- Digitalization of municipal administrative processes and services.
+### Quality & Dietary Attributes
 
-### Outstanding Terminology (Require Workshop 2 Definition)
+**VLOG (Genetic Modification-Free)**  
+Ingredients certified as free from genetic engineering.
 
-The following terms are referenced but not yet formally defined:
-1. **Paket / Package:** What constitutes a standardized project package (e.g., "Digitalisierungspaket klein/mittel/groß")?
-2. **Package Categories:** Specific categorization criteria for different package types (digitalization, infrastructure, climate measures).
+**TK (Tiefkühl - Frozen)**  
+Frozen ingredients requiring special handling and storage.
+
+**Bio (Organic)**  
+Ingredients meeting organic certification standards.
+
+**Halal**  
+Ingredients compliant with Islamic dietary laws.
+
+**Kosher**  
+Ingredients compliant with Jewish dietary laws.
+
+### Technical Terms
+
+**DIA-LIMS**  
+Laboratory Information Management System containing specification data.
+
+**IBM Save-File (*SAVF)**  
+IBM i file format used for data transfer between systems.
+
+**Metadatei (Metadata File)**  
+Denormalized table structure containing flattened recipe data for AI processing.
+
+**Muster (Sample)**  
+Sample status articles (M-prefix) still under development.
