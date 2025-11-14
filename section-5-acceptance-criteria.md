@@ -1,28 +1,20 @@
-## Section 5: Acceptance Criteria
+## Section 5: Acceptance Criteria (Abnahmekriterien)
+
+**Understanding:**
+- Acceptance criteria link to POC scope functional requirements only
+- Deferred requirements will have acceptance criteria defined when implemented
+- Format: Given-When-Then or binary pass/fail criteria
 
 | Requirement ID | Acceptance Test | Expected Outcome |
 |----------------|-----------------|------------------|
-| FR-01 | Given user accesses website, when questionnaire loads | Then all required input fields are displayed and functional |
-| FR-02 | Given questionnaire submitted, when search executes | Then funding programs from specified databases (Förderdatenbank, KfW, BAFA) are returned |
-| FR-03 | Given search completes, when results display | Then 5-7 relevant funding programs shown with percentage ranges and amounts |
-| FR-04 | *To be defined in Workshop 2* | *Package categorization logic requires definition* |
-| FR-05 | Given results displayed, when user views page | Then membership application CTA is visible and functional |
-| FR-06 | Given user interactions complete, when data capture executes | Then municipality contact info and funding interests are stored |
-| FR-07 | Given user accesses landing page, when page loads | Then Klimafolgenschutzverein informational content is displayed |
+| FR-02 | Given two recipes with shared Material_IDs, when comparison is executed | System identifies all exact Material_ID matches between recipes |
+| FR-02a | Given Recipe A (20 ingredients) and Recipe B (10 ingredients) with 8 shared ingredients, when overlap ratio is calculated | System returns overlap ratio of 0.40 (8/20 using MAX normalization) |
+| FR-04 | Given matched ingredient with 5.2% in Recipe A and 5.8% in Recipe B, when percentage similarity is calculated | System calculates similarity score based on percentage difference |
+| FR-08 | Given unmatched ingredients from two recipes, when resource category comparison is executed | System identifies and flags ingredient pairs sharing same Rohstoffkategorie |
+| FR-05 | Given comparison of Recipe A against all recipes in database, when similarity search completes | System outputs ranked list of similar recipes with percentage match scores (not binary yes/no) |
+| FR-06 | Given completed similarity analysis results, when export is requested | System generates Excel file containing recipe pairs, match scores, and ingredient details |
+| FR-11 | Given POC subset of 100 recipes, when validation tests are executed | System successfully completes all comparison operations without errors before scaling to full database |
 
-### Deferred Acceptance Criteria (Post-POC)
+---
 
-| Requirement ID | Acceptance Test | Expected Outcome |
-|----------------|-----------------|------------------|
-| FR-08 | Given user uploads document, when file processing completes | Then document content is extracted and used to enhance search |
-| FR-09 | Given funding program selected, when submission initiates | Then application data is transmitted to appropriate portal (BAFA/KfW) |
-| FR-10 | Given project requires EE-Mann, when workflow triggers | Then expert validation process is initiated |
-
-### Outstanding Acceptance Criteria (Require Workshop 2 Definition)
-
-The following criteria require detailed specification:
-1. **FR-01 Questionnaire:** Specific fields, validation rules, error handling scenarios
-2. **FR-04 Package Categorization:** Classification logic and package definitions
-3. **FR-02 Search Relevance:** What constitutes a "relevant" funding match?
-4. **FR-03 Result Sorting:** How should 5-7 programs be prioritized/sorted?
-5. **FR-06 Data Storage:** What specific fields are captured and stored?
+**Note:** Acceptance criteria for deferred requirements (FR-07, FR-10, FR-12, FR-13, FR-14, FR-15, FR-16, FR-17, FR-18, FR-19, FR-20, FR-21, FR-22, FR-23, FR-24, FR-25, FR-26, FR-27) will be defined during their respective implementation phases.
