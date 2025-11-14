@@ -1,17 +1,21 @@
-# New Test Without YAML Front Matter
+# Second Test - Checking Rendering
 
-This content was written WITHOUT the YAML front matter block at the top. Let's see if the workflow needs to add it automatically.
+This is another test to verify the GitHub Pages rendering behavior.
 
-## Testing Autonomous YAML Handling
+## Update Time
 
-If this renders as HTML at the `.html` URL, it means Jekyll is processing it even without explicit YAML front matter.
+Current timestamp: 2025-11-14 13:17:00
 
-If it shows as raw markdown, we need to ensure YAML front matter is always prepended when writing new content.
+## Content
 
-## Expected Behavior
+This markdown file does NOT have YAML front matter. We're testing whether GitHub Pages will render it as HTML or serve it as raw markdown.
 
-The utility script should handle adding YAML front matter automatically when new content is written, ensuring every update triggers Jekyll processing.
+## What We're Learning
+
+- Does Jekyll require explicit YAML front matter?
+- Can we rely on automatic processing?
+- Or do we need to prepend `---` blocks ourselves?
 
 ---
 
-*Test content - 2025-11-14*
+*Second test iteration*
