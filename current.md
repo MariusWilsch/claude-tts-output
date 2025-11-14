@@ -1,38 +1,29 @@
 ## Section 2: Goal Determination (Zielbestimmung)
 
-**Understanding:**
-- POC focuses on two main use cases: historical recipe cleanup and preventive duplicate checking
-- AI provides suggestions, humans make final decisions
-- Production optimization is future work post-POC
-- System integrates with existing IBM ERP database
-
 ### Must (POC Scope)
-
-**Historical Recipe Cleanup:**
-- Identify duplicate and similar recipes among ~8000 existing recipes
-- Compare recipes based on ingredient composition and percentages
-- Present similarity rankings to enable manual harmonization decisions
-- Reduce production complexity by consolidating redundant recipes
-
-**Preventive Duplicate Detection:**
-- Enable developers to check new product requests against existing recipe database
-- Support processing of ~7000 annual product requests
-- Manual trigger by developer (not automatic background processing)
-- Search based on ingredient names, article numbers, and percentage compositions
+- ✅ **Website with landing page** for Klimafolgenschutzverein targeting municipalities *(MEDIUM - need pages/branding detail)*
+- ❌ **Interactive questionnaire** to capture project details *(LOW - structure undefined, client stated "need to define")*
+- ✅ **AI-powered semantic search** of funding databases (Förderdatenbank, KfW, BAFA, EU sources) *(HIGH - clear requirement)*
+- ✅ **Display of relevant funding programs** with estimated amounts and percentages *(HIGH - clear output format)*
+- ❌ **Package-based categorization** for standardized projects *(LOW - concept only, no package definitions)*
+- ✅ **Lead generation flow** directing to association membership application *(MEDIUM - goal clear, form fields undefined)*
+- ✅ **Data capture** for follow-up consultation *(MEDIUM - purpose clear, specific fields undefined)*
 
 ### Deferred (Post-POC)
-
-- Batch size and production quantity optimization
-- Full container utilization optimization (minimizing partial containers)
-- Recipe adjustment automation for production efficiency
-- Direct sales team access to similarity search
-- Integration into new product request system (replacement of Lotus Notes)
-- Multi-language ingredient translation system integration
+- ✅ Document upload capability (cost estimates, planning documents from architects)
+- ✅ Direct funding application submission through platform interface
+- ✅ Browser automation for filling external funding forms
+- ✅ Detailed personalized consultation and advisory services
+- ✅ Integration with EE-Mann (energy efficiency expert) workflow
 
 ### Out of Scope
+- ✅ Custom/niche project types beyond defined standard packages
+- ✅ On-site consultation visits (replaced by remote/online approach)
+- ✅ Manual processing of individual edge cases
+- ✅ Physical distribution materials or regional office setup
 
-- Automatic recipe merging without human approval
-- Automatic specification changes without quality assurance review
-- Complete replacement of IBM ERP system
-- Sensory/taste prediction capabilities
-- Recipe formulation from scratch (only finding existing similar recipes)
+---
+
+**Legend:**
+- ✅ **HIGH/MEDIUM Confidence** - Can estimate with reasonable accuracy
+- ❌ **LOW Confidence** - Requires Workshop 2 clarification before estimation
