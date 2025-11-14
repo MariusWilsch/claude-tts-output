@@ -1,27 +1,29 @@
-# Testing Build Polling Feature
+# Fixed Build Polling - Commit SHA Verification
 
-This test verifies that the TTS utility script now waits for GitHub Pages to finish building before returning the URL.
+This test verifies that the script now correctly waits for the **specific commit** we just pushed to finish building.
 
-## Test Details
+## What Was Fixed
 
-**Timestamp:** 2025-11-14 13:20:00
+**Problem:** Script was checking old build status and exiting immediately
 
-**What's New:**
-- Script polls GitHub Pages build status
-- Waits up to 120 seconds for completion
-- Returns URL only when content is ready
+**Solution:** Now verifies build commit SHA matches our pushed commit before checking status
 
-## Expected Behavior
+## Test Timestamp
 
-You should see status updates like:
-- "Waiting for GitHub Pages build..."
-- "Status: building (5s elapsed)"
-- "✓ Build completed successfully!"
+**Current time:** 2025-11-14 13:26:00
+
+## Expected Output
+
+You should see:
+1. "Pushed commit: [7-char SHA]"
+2. "Waiting for build to start..." (if build hasn't registered yet)
+3. "Status: building" with matching commit SHA
+4. "✓ Build completed successfully!"
 
 ## Verification
 
-If you're reading this immediately after running the script, the polling feature is working correctly!
+If this test shows proper polling with status updates, the fix is working!
 
 ---
 
-*Build polling test*
+*Commit SHA verification test*
