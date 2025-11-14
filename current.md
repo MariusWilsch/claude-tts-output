@@ -1,21 +1,27 @@
-# Second Test - Checking Rendering
+# Testing Build Polling Feature
 
-This is another test to verify the GitHub Pages rendering behavior.
+This test verifies that the TTS utility script now waits for GitHub Pages to finish building before returning the URL.
 
-## Update Time
+## Test Details
 
-Current timestamp: 2025-11-14 13:17:00
+**Timestamp:** 2025-11-14 13:20:00
 
-## Content
+**What's New:**
+- Script polls GitHub Pages build status
+- Waits up to 120 seconds for completion
+- Returns URL only when content is ready
 
-This markdown file does NOT have YAML front matter. We're testing whether GitHub Pages will render it as HTML or serve it as raw markdown.
+## Expected Behavior
 
-## What We're Learning
+You should see status updates like:
+- "Waiting for GitHub Pages build..."
+- "Status: building (5s elapsed)"
+- "✓ Build completed successfully!"
 
-- Does Jekyll require explicit YAML front matter?
-- Can we rely on automatic processing?
-- Or do we need to prepend `---` blocks ourselves?
+## Verification
+
+If you're reading this immediately after running the script, the polling feature is working correctly!
 
 ---
 
-*Second test iteration*
+*Build polling test*
