@@ -1,26 +1,28 @@
-# Pflichtenheft: Kommunale Fördermittel-Suchplattform
+# Pflichtenheft
+
+## Kommunale Fördermittel-Suchplattform
 
 *Hybrid Post-Workshop Documentation for AI-Driven POC Projects*
 
 ---
 
-## 1. Cover Page
+## Section 1: Cover Page (Deckblatt)
 
-**Project:** Kommunale Fördermittel-Suchplattform
-
-**Client:** Abtmayr & Reichert GmbH
-
-**Contractor:** Wilsch AI Services OÜ
+| | |
+|---|---|
+| **Project** | Kommunale Fördermittel-Suchplattform |
+| **Client** | Abtmayr & Reichert GmbH |
+| **Contractor** | Wilsch AI Services OÜ |
 
 ---
 
-## 2. Goal Determination
+## Section 2: Goal Determination (Zielbestimmung)
 
 ### Must (POC Scope)
 - Website with landing page for Klimafolgenschutzverein targeting municipalities
 - Interactive questionnaire to capture project details (type, scope, budget, municipality info)
-- AI-powered semantic search of funding databases (Förderdatenbank, KfW, BAFA, EU sources)
-- Display of relevant funding programs with estimated amounts and percentages
+- AI-powered semantic search of funding databases (starting with one database)
+- Display of relevant funding programs with estimated amounts and percentages (2-3 results)
 - Package-based categorization for standardized projects (digitalization, climate protection, infrastructure)
 - Lead generation flow directing to association membership application
 - Data capture for follow-up consultation
@@ -76,7 +78,7 @@
 
 ---
 
-## 3. Functional Requirements
+## Section 3: Functional Requirements (Funktionale Anforderungen)
 
 ### Must (POC Scope)
 
@@ -134,7 +136,7 @@
 
 ---
 
-## 4. Non-Functional Requirements
+## Section 4: Liste der nicht-funktionalen Anforderungen (Non-Functional Requirements)
 
 ### Performance
 - *To be defined in Workshop 2*
@@ -159,29 +161,25 @@ The following NFRs need quantification and validation:
 
 ---
 
-## 5. Acceptance Criteria
+## Section 5: Abnahmekriterien (Acceptance Criteria)
 
-**FR-01:** Given user accesses website, when questionnaire loads, then all required input fields are displayed and functional
-
-**FR-02:** Given questionnaire submitted, when search executes, then funding programs from specified database are returned
-
-**FR-03:** Given search completes, when results display, then 2-3 relevant funding programs shown with percentage ranges and amounts
-
-**FR-04:** *To be defined in Workshop 2 - Package categorization logic requires definition*
-
-**FR-05:** Given results displayed, when user views page, then membership application CTA is visible and functional
-
-**FR-06:** Given user interactions complete, when data capture executes, then municipality contact info and funding interests are stored
-
-**FR-07:** Given user accesses landing page, when page loads, then Klimafolgenschutzverein informational content is displayed
+| Requirement ID | Acceptance Test | Expected Outcome |
+|----------------|-----------------|------------------|
+| FR-01 | Given user accesses website, when questionnaire loads | Then all required input fields are displayed and functional |
+| FR-02 | Given questionnaire submitted, when search executes | Then funding programs from specified database are returned |
+| FR-03 | Given search completes, when results display | Then 2-3 relevant funding programs shown with percentage ranges and amounts |
+| FR-04 | *To be defined in Workshop 2* | *Package categorization logic requires definition* |
+| FR-05 | Given results displayed, when user views page | Then membership application CTA is visible and functional |
+| FR-06 | Given user interactions complete, when data capture executes | Then municipality contact info and funding interests are stored |
+| FR-07 | Given user accesses landing page, when page loads | Then Klimafolgenschutzverein informational content is displayed |
 
 ### Deferred Acceptance Criteria (Post-POC)
 
-**FR-08:** Given user uploads document, when file processing completes, then document content is extracted and used to enhance search
-
-**FR-09:** Given funding program selected, when submission initiates, then application data is transmitted to appropriate portal (BAFA/KfW)
-
-**FR-10:** Given project requires EE-Mann, when workflow triggers, then expert validation process is initiated
+| Requirement ID | Acceptance Test | Expected Outcome |
+|----------------|-----------------|------------------|
+| FR-08 | Given user uploads document, when file processing completes | Then document content is extracted and used to enhance search |
+| FR-09 | Given funding program selected, when submission initiates | Then application data is transmitted to appropriate portal (BAFA/KfW) |
+| FR-10 | Given project requires EE-Mann, when workflow triggers | Then expert validation process is initiated |
 
 ### Outstanding Acceptance Criteria (Require Workshop 2 Definition)
 
@@ -194,7 +192,7 @@ The following criteria require detailed specification:
 
 ---
 
-## 6. Technical Constraints
+## Section 6: Technische Rahmen- oder Randbedingungen (Technical Constraints)
 
 ### Deployment Environment
 - **Backend:** Hetzner server (Frankfurt datacenter)
@@ -222,13 +220,13 @@ The following technical decisions need clarification:
 
 ---
 
-## 7. Data Model - SKIPPED
+## Section 7: Data Model (Datenmodell) - SKIPPED
 
 *This section is skipped as database schema is an implementation detail to be decided during development.*
 
 ---
 
-## 8. Domain Glossary
+## Section 8: Domain Glossary (Glossar / Fachglossar)
 
 ### Key Terms
 
@@ -270,7 +268,7 @@ The following terms are referenced but not yet formally defined:
 
 ---
 
-## 9. Evaluation Infrastructure
+## Section 9: Evaluation Infrastructure (AI-Specific Testing)
 
 ### Test Datasets
 - *To be defined in Workshop 2*
