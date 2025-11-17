@@ -4,348 +4,348 @@
 
 ---
 
-## Section 1: Cover Page (Deckblatt)
+## Abschnitt 1: Deckblatt
 
 |  |  |
 | :---- | :---- |
-| **Project** | KI_PROJEKT_SOSSEN_SOURCING |
-| **Client** | AVO-Werke August Beisse GmbH |
-| **Contractor** | Wilsch AI Services OÜ |
+| **Projekt** | KI_PROJEKT_SOSSEN_SOURCING |
+| **Auftraggeber** | AVO-Werke August Beisse GmbH |
+| **Auftragnehmer** | Wilsch AI Services OÜ |
 
 ---
 
-## Section 2: Goal Determination (Zielbestimmung)
+## Abschnitt 2: Zielbestimmung
 
-### Must (POC Scope)
+### Muss (POC-Umfang)
 
-**Search based on ingredient names, article numbers, and percentage compositions**
+**Suche nach Zutatennamen, Artikelnummern und prozentualen Zusammensetzungen**
 
-- Identify duplicate and similar recipes among ~8000 existing recipes
-- Compare recipes based on ingredient composition and percentages
-- Present similarity rankings to enable manual harmonization decisions
-- Reduce production complexity by consolidating redundant recipes
-- POC validation starts with subset of ~100 recipes
+- Identifikation von Duplikaten und ähnlichen Rezepten unter ca. 8000 bestehenden Rezepten
+- Vergleich von Rezepten basierend auf Zutatenzusammensetzung und Mengenangaben
+- Darstellung von Ähnlichkeitsrankings zur Ermöglichung manueller Harmonisierungsentscheidungen
+- Reduzierung der Produktionskomplexität durch Konsolidierung redundanter Rezepte
+- POC-Validierung beginnt mit einer Teilmenge von ca. 100 Rezepten
 
-### Deferred (Post-POC)
+### Zurückgestellt (Nach POC)
 
-**Historical Recipe Cleanup - Advanced filtering capabilities**
+**Historische Rezeptbereinigung - Erweiterte Filterfunktionen**
 
-- Filter recipes by special ingredient attributes (VLOG, TK, Bio, Halal, Kosher)
-
----
-
-## Section 3: Functional Requirements (Funktionale Anforderungen)
-
-### Must (POC Scope)
-
-**Compare recipes based on ingredient composition and percentages**
-
-- **FR-02:** System shall match ingredients by Material_ID (article number) for exact identification.
-- **FR-02a:** System shall calculate ingredient overlap ratio between recipe pairs.
-- **FR-04:** System shall compare percentage amounts between matched ingredient pairs and calculate similarity scores.
-- **FR-08:** System shall identify unmatched ingredients sharing the same resource category (Rohstoffkategorie) for potential substitution matching.
-
-**Present similarity rankings to enable manual harmonization decisions**
-
-- **FR-05:** System shall output similarity rankings (not binary yes/no) showing percentage match scores between recipe pairs.
-- **FR-06:** System shall export results to Excel format with recipe details and match scores.
-
-**Validate POC functionality**
-
-- **FR-11:** System shall validate POC functionality with a subset of ~100 recipes before scaling to a full ~8000 recipe database.
-
-
-### Deferred (Post-POC)
-
-**Historical Recipe Cleanup**
-
-*Advanced comparison capabilities*
-
-- **FR-03:** System shall support hierarchical recipe structures (Vormischungen/pre-mixes) with option to compare at same level or exploded to base ingredients.
-
-*Advanced filtering and UI capabilities*
-
-- **FR-07:** System shall filter recipes by special ingredient attributes (e.g VLOG, TK/Tiefkühl, Bio, Halal, Kosher).
-- **FR-10:** System shall use configurable threshold parameters for similarity calculations.
-- **FR-12:** System shall provide chat interface for interactive similarity search queries.
-
-*Visual comparison enhancements*
-
-- **FR-23:** System shall remember user-accepted ingredient substitutions for future comparison suggestions.
-- **FR-24:** System shall provide visual highlighting of percentage differences with configurable color coding and slider controls.
-- **FR-25:** System shall provide ingredient-level and recipe-level comparison views with percentage differences shown per column.
-
-*Data infrastructure*
-
-- **FR-26:** System shall query recipe database directly via JDBC for data access.
-- **FR-27:** System shall automatically generate and update metadata structure file through batch processing for consistent data synchronization.
-
-*User interface*
-
-- **FR-28:** System shall provide custom side-by-side comparison interface integrated with OpenWebUI chat, supporting interactive controls and dual-view layouts (desktop-optimized).
+- Filterung von Rezepten nach speziellen Zutatenattributen (VLOG, TK, Bio, Halal, Koscher)
 
 ---
 
-## Section 4: Non-Functional Requirements (Liste der nicht-funktionalen Anforderungen)
+## Abschnitt 3: Funktionale Anforderungen
 
-**Note:** Final quantified metrics to be defined in collaboration with Thomas Erhard (infrastructure specialist)
+### Muss (POC-Umfang)
 
-### Performance
+**Rezeptvergleich basierend auf Zutatenzusammensetzung und Mengenangaben**
 
-- **NFR-01 [TBD]:** System shall support comparison operations on a database of ~8000 recipes.
+- **FR-02:** Das System muss Zutaten über die Material_ID (Artikelnummer) zur eindeutigen Identifizierung abgleichen.
+- **FR-02a:** Das System muss die Überschneidungsrate der Zutaten zwischen Rezeptpaaren berechnen.
+- **FR-04:** Das System muss prozentuale Mengenangaben zwischen übereinstimmenden Zutatenpaaren vergleichen und Ähnlichkeitswerte berechnen.
+- **FR-08:** Das System muss nicht übereinstimmende Zutaten identifizieren, die dieselbe Rohstoffkategorie teilen, um potenzielle Substitutionsübereinstimmungen zu ermöglichen.
 
-  - *To be quantified: Response time thresholds, throughput requirements*
+**Darstellung von Ähnlichkeitsrankings zur Ermöglichung manueller Harmonisierungsentscheidungen**
+
+- **FR-05:** Das System muss Ähnlichkeitsrankings (keine binären Ja/Nein-Angaben) ausgeben, die prozentuale Übereinstimmungswerte zwischen Rezeptpaaren anzeigen.
+- **FR-06:** Das System muss Ergebnisse im Excel-Format mit Rezeptdetails und Übereinstimmungswerten exportieren.
+
+**Validierung der POC-Funktionalität**
+
+- **FR-11:** Das System muss die POC-Funktionalität mit einer Teilmenge von ca. 100 Rezepten validieren, bevor auf die vollständige Datenbank von ca. 8000 Rezepten skaliert wird.
 
 
-- **NFR-02 [TBD]:** POC shall complete similarity analysis on a subset of ~100 recipes.
+### Zurückgestellt (Nach POC)
 
-  - *To be quantified: Maximum processing time acceptable*
+**Historische Rezeptbereinigung**
 
-### Compatibility
+*Erweiterte Vergleichsfunktionen*
 
-- **NFR-03:** System shall integrate with IBM AS/400 database system.
+- **FR-03:** Das System muss hierarchische Rezeptstrukturen (Vormischungen) mit der Option unterstützen, auf derselben Ebene zu vergleichen oder auf Basiszutaten herunterzubrechen.
 
-- **NFR-04:** System shall export results in Excel-compatible format.
+*Erweiterte Filter- und UI-Funktionen*
 
-### Security
+- **FR-07:** Das System muss Rezepte nach speziellen Zutatenattributen filtern können (z.B. VLOG, TK/Tiefkühl, Bio, Halal, Koscher).
+- **FR-10:** Das System muss konfigurierbare Schwellenwertparameter für Ähnlichkeitsberechnungen verwenden.
+- **FR-12:** Das System muss eine Chat-Oberfläche für interaktive Ähnlichkeitssuchanfragen bereitstellen.
 
-- **NFR-05 [TBD]:** System shall require VPN tunnel access for POC deployment phase.
-  - *To be defined with Thomas Erhard: Encryption standards, authentication requirements*
+*Visuelle Vergleichserweiterungen*
 
-### Usability
+- **FR-23:** Das System muss vom Benutzer akzeptierte Zutatenaustausche für zukünftige Vergleichsvorschläge speichern.
+- **FR-24:** Das System muss visuelle Hervorhebungen von prozentualen Unterschieden mit konfigurierbarer Farbcodierung und Schiebereglern bereitstellen.
+- **FR-25:** Das System muss Ansichten auf Zutaten- und Rezeptebene mit spaltenweiser Anzeige prozentualer Unterschiede bereitstellen.
+
+*Dateninfrastruktur*
+
+- **FR-26:** Das System muss die Rezeptdatenbank direkt über JDBC für den Datenzugriff abfragen.
+- **FR-27:** Das System muss die Metadatenstrukturdatei durch Stapelverarbeitung automatisch generieren und aktualisieren, um eine konsistente Datensynchronisation zu gewährleisten.
+
+*Benutzeroberfläche*
+
+- **FR-28:** Das System muss eine benutzerdefinierte Vergleichsansicht für die Integration mit OpenWebUI-Chat bereitstellen, die interaktive Steuerelemente und Dual-View-Layouts unterstützt (Desktop-optimiert).
+
+---
+
+## Abschnitt 4: Nicht-funktionale Anforderungen
+
+**Hinweis:** Die finalen quantifizierten Metriken werden in Zusammenarbeit mit Thomas Erhard (Infrastrukturspezialist) definiert.
+
+### Leistung
+
+- **NFR-01 [TBD]:** Das System muss Vergleichsoperationen auf einer Datenbank von ca. 8000 Rezepten unterstützen.
+
+  - *Zu quantifizieren: Antwortzeitschwellen, Durchsatzanforderungen*
+
+
+- **NFR-02 [TBD]:** Der POC muss Ähnlichkeitsanalysen auf einer Teilmenge von ca. 100 Rezepten durchführen.
+
+  - *Zu quantifizieren: Maximal akzeptable Verarbeitungszeit*
+
+### Kompatibilität
+
+- **NFR-03:** Das System muss mit dem IBM AS/400 Datenbanksystem integriert werden.
+
+- **NFR-04:** Das System muss Ergebnisse in einem Excel-kompatiblen Format exportieren.
+
+### Sicherheit
+
+- **NFR-05 [TBD]:** Das System muss VPN-Tunnel-Zugriff für die POC-Bereitstellungsphase erfordern.
+  - *Mit Thomas Erhard zu definieren: Verschlüsselungsstandards, Authentifizierungsanforderungen*
+
+### Benutzerfreundlichkeit
 
 - **TBD**
 
 
 ---
 
-## Section 5: Acceptance Criteria (Abnahmekriterien)
+## Abschnitt 5: Abnahmekriterien
 
-**Note:** Acceptance criteria for deferred requirements will be defined during their respective implementation phases.
+**Hinweis:** Abnahmekriterien für zurückgestellte Anforderungen werden während ihrer jeweiligen Implementierungsphasen definiert.
 
-### FR-02: Material_ID Matching
+### FR-02: Material_ID Abgleich
 
-- **Given** two recipes with shared Material_IDs
-- **When** comparison is executed
-- **Then** system identifies all exact Material_ID matches between recipes
+- **Gegeben** zwei Rezepte mit gemeinsamen Material_IDs
+- **Wenn** der Vergleich ausgeführt wird
+- **Dann** identifiziert das System alle exakten Material_ID-Übereinstimmungen zwischen den Rezepten
 
-### FR-02a: Overlap Ratio Calculation
+### FR-02a: Berechnung der Überschneidungsrate
 
-Note: This may change during implementation
+Hinweis: Dies kann sich während der Implementierung ändern
 
-- **Given** Recipe A (20 ingredients) and Recipe B (10 ingredients) with 8 shared ingredients
-- **When** overlap ratio is calculated
-- **Then** system returns overlap ratio of 0.40
+- **Gegeben** Rezept A (20 Zutaten) und Rezept B (10 Zutaten) mit 8 gemeinsamen Zutaten
+- **Wenn** die Überschneidungsrate berechnet wird
+- **Dann** gibt das System eine Überschneidungsrate von 0,40 zurück
 
-### FR-04: Percentage Similarity
+### FR-04: Prozentuale Ähnlichkeit
 
-- **Given** matched ingredient with 5.2% in Recipe A and 5.8% in Recipe B
-- **When** percentage similarity is calculated
-- **Then** system calculates similarity score based on percentage difference
+- **Gegeben** eine übereinstimmende Zutat mit 5,2% in Rezept A und 5,8% in Rezept B
+- **Wenn** die prozentuale Ähnlichkeit berechnet wird
+- **Dann** berechnet das System einen Ähnlichkeitswert basierend auf der prozentualen Differenz
 
-### FR-08: Resource Category Matching
+### FR-08: Rohstoffkategorie-Abgleich
 
-- **Given** unmatched ingredients from two recipes
-- **When** resource category comparison is executed
-- **Then** system identifies and flags ingredient pairs sharing same Rohstoffkategorie
+- **Gegeben** nicht übereinstimmende Zutaten aus zwei Rezepten
+- **Wenn** der Rohstoffkategorie-Vergleich ausgeführt wird
+- **Dann** identifiziert und markiert das System Zutatenpaare, die dieselbe Rohstoffkategorie teilen
 
-### FR-05: Similarity Rankings Output
+### FR-05: Ausgabe von Ähnlichkeitsrankings
 
-- **Given** comparison of Recipe A against all recipes in database
-- **When** similarity search completes
-- **Then** system outputs ranked list of similar recipes with percentage match scores
+- **Gegeben** ein Vergleich von Rezept A gegen alle Rezepte in der Datenbank
+- **Wenn** die Ähnlichkeitssuche abgeschlossen ist
+- **Dann** gibt das System eine Rangliste ähnlicher Rezepte mit prozentualen Übereinstimmungswerten aus
 
-### FR-06: Excel Export
+### FR-06: Excel-Export
 
-- **Given** completed similarity analysis results
-- **When** export is requested
-- **Then** system generates Excel file containing recipe pairs, match scores, and ingredient details
+- **Gegeben** abgeschlossene Ähnlichkeitsanalyseergebnisse
+- **Wenn** ein Export angefordert wird
+- **Dann** generiert das System eine Excel-Datei mit Rezeptpaaren, Übereinstimmungswerten und Zutatendetails
 
-### FR-11: POC Validation
+### FR-11: POC-Validierung
 
-- **Given** POC subset of 100 recipes
-- **When** validation tests are executed
-- **Then** system successfully completes all comparison operations without errors before scaling to full database
-
----
-
-## Section 6: Technical Constraints (Technische Rahmen- oder Randbedingungen)
-
-### Deployment Environment
-
-**POC Phase:**
-
-- Hosting: WPH datacenter on IBM Power 10
-- Data format: IBM Save-File (*SAVF) containing metadata table
-- Test dataset: 100 recipes with 5 known duplicate pairs (provided by AVO)
-- Hosting costs included in proposal
-
-**Production Phase:**
-
-- On-premise deployment on AVO's IBM Power 10 server
-- Hardware: 8 CPU cores, 512GB RAM
-- Operating system: IBM i
-- AI-LPAR setup effort: 4-5 person-days
-- No additional hardware required (current assessment)
-
-### Required Integrations
-
-**Database Integration:**
-
-- IBM AS/400 / IBM i system with DB2 database
-- Data access: Metadata file in IBM Save-File format (*SAVF)
-- Metadata structure: Denormalized table with flattened recipe hierarchy
-- ~8000 recipes in production database
-- Batch processing for metadata file updates (cycle TBD with AVO)
-
-**Output Integration:**
-
-- Excel export format (based on AVO template from workshop)
-- Top 5 similar recipes per query
-- Three criteria displayed separately per match
-
-**Existing Systems Context:**
-
-- DIA-LIMS system (laboratory information, linked to metadata)
-- SoftM/Comarch ERP system
-- Lotus Notes/Domino (product request system - replacement planned)
-
-### Technology Stack Decisions
-
-**Backend [TBD with Thomas Erhard]:**
-
-- Preferred: FastAPI (Python)
-- Constraint: IBM Power processor compatibility to be verified
-
-**Data Processing:**
-
-- Metadata file: Hierarchical recipe structures flattened to single-level
-- Relative quantities calculated to 100% per manufacturing instruction
-- Integration with DIA-LIMS data fields
-
-**AVO Infrastructure Context:**
-
-- Existing technologies: RPG, Java, Profound UI
-- Database: DB2 on IBM i
+- **Gegeben** POC-Teilmenge von 100 Rezepten
+- **Wenn** Validierungstests ausgeführt werden
+- **Dann** führt das System alle Vergleichsoperationen erfolgreich ohne Fehler durch, bevor auf die vollständige Datenbank skaliert wird
 
 ---
 
-## Section 7: Data Model (Datenmodell)
+## Abschnitt 6: Technische Rahmenbedingungen
 
-### Metadata Table Structure
+### Bereitstellungsumgebung
 
-The POC uses a denormalized metadata file containing flattened recipe data. Key transformations:
+**POC-Phase:**
 
-- Hierarchical Baukasten structure → single-level table
-- Relative quantities normalized to 100% per manufacturing instruction
-- DIA-LIMS data integrated per ingredient
+- Hosting: WPH-Rechenzentrum auf IBM Power 10
+- Datenformat: IBM Save-File (*SAVF) mit Metadatentabelle
+- Testdatensatz: 100 Rezepte mit 5 bekannten Duplikatpaaren (bereitgestellt von AVO)
+- Hosting-Kosten im Angebot enthalten
 
-**Complete column structure:** See [AVO_WS2_Tabellenstruktur Metadatei_20251108.xlsx](https://docs.google.com/spreadsheets/u/0/d/1Avdw2iuCZdbvZSIVa7cGe_zAv2K6298B/edit)
+**Produktionsphase:**
+
+- On-Premise-Bereitstellung auf AVOs IBM Power 10 Server
+- Hardware: 8 CPU-Kerne, 512GB RAM
+- Betriebssystem: IBM i
+- AI-LPAR-Setup-Aufwand: 4-5 Personentage
+- Keine zusätzliche Hardware erforderlich (aktuelle Einschätzung)
+
+### Erforderliche Integrationen
+
+**Datenbankintegration:**
+
+- IBM AS/400 / IBM i System mit DB2-Datenbank
+- Datenzugriff: Metadatendatei im IBM Save-File-Format (*SAVF)
+- Metadatenstruktur: Denormalisierte Tabelle mit abgeflachter Rezepthierarchie
+- Ca. 8000 Rezepte in der Produktionsdatenbank
+- Stapelverarbeitung für Metadatendatei-Aktualisierungen (Zyklus mit AVO abzustimmen)
+
+**Ausgabeintegration:**
+
+- Excel-Exportformat (basierend auf AVO-Vorlage aus Workshop)
+- Top 5 ähnliche Rezepte pro Anfrage
+- Drei Kriterien separat pro Übereinstimmung angezeigt
+
+**Kontext bestehender Systeme:**
+
+- DIA-LIMS-System (Laborinformationen, verknüpft mit Metadaten)
+- SoftM/Comarch ERP-System
+- Lotus Notes/Domino (Produktanfrage-System - Ersatz geplant)
+
+### Technologie-Stack-Entscheidungen
+
+**Backend [mit Thomas Erhard abzustimmen]:**
+
+- Bevorzugt: FastAPI (Python)
+- Einschränkung: IBM Power Prozessorkompatibilität muss verifiziert werden
+
+**Datenverarbeitung:**
+
+- Metadatendatei: Hierarchische Rezeptstrukturen auf eine Ebene abgeflacht
+- Relative Mengen auf 100% pro Herstellvorschrift berechnet
+- Integration mit DIA-LIMS-Datenfeldern
+
+**AVO-Infrastrukturkontext:**
+
+- Bestehende Technologien: RPG, Java, Profound UI
+- Datenbank: DB2 auf IBM i
 
 ---
 
-## Section 8: Domain Glossary (Fachbegriffe)
+## Abschnitt 7: Datenmodell
 
-### Recipe Structure Terms
+### Metadatentabellen-Struktur
 
-**Vormischungen (Pre-mixes)**
-Intermediate products marked with "V" prefix that have their own recipes and are used as ingredients in final products.
+Der POC verwendet eine denormalisierte Metadatendatei mit abgeflachten Rezeptdaten. Wesentliche Transformationen:
 
-**Baukasten (Modular Structure)**
-Hierarchical recipe system where recipes can contain other recipes as components.
+- Hierarchische Baukasten-Struktur → Tabelle auf einer Ebene
+- Relative Mengen auf 100% pro Herstellvorschrift normalisiert
+- DIA-LIMS-Daten pro Zutat integriert
 
-**Herstellvorschrift (Manufacturing Instruction)**
-Recipe specification defining ingredients and their proportions.
+**Vollständige Spaltenstruktur:** Siehe [AVO_WS2_Tabellenstruktur Metadatei_20251108.xlsx](https://docs.google.com/spreadsheets/u/0/d/1Avdw2iuCZdbvZSIVa7cGe_zAv2K6298B/edit)
 
-**Ansatzgröße (Batch Size)**
- Production quantity for a single manufacturing run.
+---
 
-### Ingredient Classification
+## Abschnitt 8: Fachbegriffe
 
-**Material_ID (Article Number)**
-Unique identifier for ingredients and components in the database.
+### Rezeptstruktur-Begriffe
 
-**Rohstoffkategorie (Resource Category)**
-Functional grouping of ingredients for substitution matching (e.g., "Gewürze/Paprika" for all paprika variants).
+**Vormischungen**
+Zwischenprodukte mit "V"-Präfix, die eigene Rezepte haben und als Zutaten in Endprodukten verwendet werden.
 
-**Materialgruppe (Material Group)**
-Purchasing-oriented ingredient categories (M-prefix).
+**Baukasten**
+Hierarchisches Rezeptsystem, bei dem Rezepte andere Rezepte als Komponenten enthalten können.
 
-### Technical Terms
+**Herstellvorschrift**
+Rezeptspezifikation, die Zutaten und deren Anteile definiert.
+
+**Ansatzgröße**
+Produktionsmenge für einen einzelnen Herstelldurchlauf.
+
+### Zutatenkategorisierung
+
+**Material_ID**
+Eindeutige Kennung für Zutaten und Komponenten in der Datenbank.
+
+**Rohstoffkategorie**
+Funktionale Gruppierung von Zutaten für Substitutionsabgleiche (z.B. "Gewürze/Paprika" für alle Paprikavarianten).
+
+**Materialgruppe**
+Einkaufsorientierte Zutatenkategorien (M-Präfix).
+
+### Technische Begriffe
 
 **DIA-LIMS**
-Laboratory Information Management System containing specification data.
+Laborinformationsmanagementsystem mit Spezifikationsdaten.
 
-\**IBM Save-File (SAVF)*
-IBM i file format used for data transfer between systems.
+**IBM Save-File (SAVF)**
+IBM i Dateiformat zur Datenübertragung zwischen Systemen.
 
-**Metadatei (Metadata File)**
- Denormalized table structure containing flattened recipe data for AI processing.
+**Metadatei**
+Denormalisierte Tabellenstruktur mit abgeflachten Rezeptdaten für die KI-Verarbeitung.
 
-**Muster (Sample)**
-Sample status articles (M-prefix) still under development.
+**Muster**
+Artikel mit Musterstatus (M-Präfix), die sich noch in der Entwicklung befinden.
 
 ---
 
-## Section 9: Evaluation Infrastructure (Evaluierungsmethodik)
+## Abschnitt 9: Evaluierungsmethodik
 
-### Test Dataset Structure
+### Testdatensatz-Struktur
 
-**Size:** 100 recipes from production database
+**Größe:** 100 Rezepte aus der Produktionsdatenbank
 
-**Composition:**
+**Zusammensetzung:**
 
-- Minimum 5 known duplicate pairs manually identified by AVO product development
-- Represents realistic production data distribution
-- Known duplicates serve as validation baseline
+- Mindestens 5 bekannte Duplikatpaare, manuell von der AVO-Produktentwicklung identifiziert
+- Repräsentiert realistische Produktionsdatenverteilung
+- Bekannte Duplikate dienen als Validierungsbasis
 
 **Format:**
-IBM Save-File (*SAVF) in metadata table structure
+IBM Save-File (*SAVF) in Metadatentabellen-Struktur
 
-**Provider:**
-AVO (Mitwirkungspflicht - client responsibility)
+**Bereitsteller:**
+AVO (Mitwirkungspflicht)
 
-### Input/Output Specification
+### Input/Output-Spezifikation
 
 **Input:**
 
-- Article number (Artikelnummer) as query parameter
-- Single recipe comparison per query
+- Artikelnummer als Abfrageparameter
+- Ein Rezeptvergleich pro Anfrage
 
 **Output:**
 
-- Top 5 most similar recipes ranked by similarity
-- Excel format based on AVO workshop template
-- Three criteria displayed separately per match:
-  1. Komponenten-Übereinstimmung (Overlap ratio)
-  2. Mengenähnlichkeit (Percentage similarity)
-  3. Kategorie-Matching (Resource category matches)
+- Top 5 ähnlichste Rezepte nach Ähnlichkeit geordnet
+- Excel-Format basierend auf AVO-Workshop-Vorlage
+- Drei Kriterien separat pro Übereinstimmung angezeigt:
+  1. Komponenten-Übereinstimmung (Überschneidungsrate)
+  2. Mengenähnlichkeit (Prozentuale Ähnlichkeit)
+  3. Kategorie-Matching (Rohstoffkategorie-Übereinstimmungen)
 
-### Success Criteria
+### Erfolgskriterien
 
-**Primary Validation:**
+**Primäre Validierung:**
 
-- Algorithm must identify the 5 known duplicate pairs
-- Known duplicates should rank in Top 5 results for their counterparts
+- Der Algorithmus muss die 5 bekannten Duplikatpaare identifizieren
+- Bekannte Duplikate sollten in den Top 5 Ergebnissen für ihre Gegenstücke erscheinen
 
-**Iterative Refinement:**
+**Iterative Verfeinerung:**
 
-- AVO product development reviews Excel outputs
-- Algorithm parameters adjusted based on feedback
-- Threshold values tuned iteratively
+- AVO-Produktentwicklung prüft Excel-Ausgaben
+- Algorithmusparameter werden basierend auf Feedback angepasst
+- Schwellenwerte werden iterativ abgestimmt
 
-**Acceptance:**
+**Abnahme:**
 
-- Known duplicates correctly identified
-- Results deemed useful by product development for harmonization decisions
+- Bekannte Duplikate korrekt identifiziert
+- Ergebnisse von der Produktentwicklung als nützlich für Harmonisierungsentscheidungen bewertet
 
-### Evaluation Process
+### Evaluierungsprozess
 
-1. Load test dataset (100 recipes) into POC environment
-2. Run similarity search for each recipe in test set
-3. Export results to Excel using AVO template
-4. AVO reviews outputs and validates against known duplicates
-5. Adjust algorithm parameters if needed
-6. Repeat until acceptance criteria met
+1. Testdatensatz (100 Rezepte) in POC-Umgebung laden
+2. Ähnlichkeitssuche für jedes Rezept im Testset durchführen
+3. Ergebnisse mit AVO-Vorlage nach Excel exportieren
+4. AVO prüft Ausgaben und validiert gegen bekannte Duplikate
+5. Bei Bedarf Algorithmusparameter anpassen
+6. Wiederholen, bis Abnahmekriterien erfüllt sind
 
-**Responsibility:** Wilsch AI Services implements evaluation, AVO validates results
+**Verantwortung:** Wilsch AI Services implementiert die Evaluierung, AVO validiert die Ergebnisse
