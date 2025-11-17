@@ -1,8 +1,8 @@
-# Ways of Working - Product Development Partnership
+# Ways of Working
 
-**Purpose:** Establish communication structure and expectations for effective collaboration between Marius (Product Development Lead) and ARCHIBUS team.
+**Purpose:** Establish communication structure for effective collaboration between Marius and the ARCHIBUS team.
 
-**Context:** This proposal aligns with our Retainer Services Agreement (Section 1.2 - "weekly coordination meetings" and "participate in commercial/strategic topics") and reflects my financial stake in the business via subscription revenue share.
+**Context:** This aligns with our Retainer Services Agreement (Section 1.2 - "weekly coordination meetings" and "participate in commercial/strategic topics") and reflects Marius's financial stake via subscription revenue share.
 
 ---
 
@@ -18,8 +18,6 @@
 - Commercial/product decision discussions (pricing, roadmap)
 - Unblocking and resource needs
 
-**Outcome:** Clear priorities for next 1-2 weeks, understanding of business context, feedback loop on work quality
-
 ---
 
 ### Weekly Technical Sync with Ryan (API Developer)
@@ -33,7 +31,7 @@
 
 ### All-Hands Meeting Inclusion
 **Purpose:**
-- Team integration (feel part of the team vs. external)
+- Team integration
 - Company-wide context and cross-functional awareness
 
 ---
@@ -47,63 +45,43 @@
 
 ## 2. Communication Preferences
 
-### Primary Channel
-**Email** for strategic discussions, deliverable sharing, and important updates
+**Primary Channel:** WhatsApp for day-to-day communication and updates
 
-### Deliverable Storage
-**Microsoft Teams** for all documentation, analysis, and work products
-
-### Urgent Escalation
-For blockers requiring immediate attention: [To be defined - Slack/phone/other?]
+**Deliverable Storage:** Microsoft Teams for all documentation, analysis, and work products
 
 ---
 
-## 3. Deliverable Expectations
+## 3. Deliverable Review Process
 
-### Review Timeline
-**Target:** Acknowledgment within 1 week of submission
-**Reality check:** Recognizing Miguel's schedule, flexible on exact timing
+**What Marius Commits To:**
+- Clear documentation with executive summary
+- Work products stored in Teams
+- Deliverables aligned with agreed priorities
 
-### Feedback Format
-**Minimum:** Simple acknowledgment ("received, looks good")
-**Ideal:** Specific feedback, questions, or action items when relevant
+**What ARCHIBUS Team Commits To:**
+- Review within 1 week of submission
+- Feedback with direction: specific guidance on what's working and what needs adjustment (e.g., "Good on X, adjust Y")
+- This allows Marius to act accordingly and iterate effectively
 
-### Deliverable Format
-- Documentation stored in Teams
-- Clear summary/executive overview at top
-- Action items or recommendations highlighted
+**Why This Matters:** Feedback loop ensures work stays aligned with business needs and prevents working in isolation.
 
 ---
 
 ## 4. Onboarding Session (One-Time)
 
-**Purpose:** Establish baseline context for operating as product development lead
+**Purpose:** Establish baseline context for effective collaboration
 
 **Topics to Cover:**
 - Business goals and product strategy
-- Customer needs and target market
-- Current sales pipeline and commercial priorities
-- Decision-making boundaries (what I can decide autonomously vs. needs approval)
-- Success metrics (how do we measure if this partnership is working?)
+- Customer needs and current sales pipeline
+- Decision-making boundaries
+- Success metrics for the partnership
 
-**Duration:** 60 minutes
-
-**Timing:** As soon as feasible to establish foundation for ongoing collaboration
-
----
-
-## 5. Success Indicators
-
-This communication structure is working if:
-- Deliverables align with business priorities (not working in isolation)
-- Clear feedback loop exists (I know if work is helpful or needs adjustment)
-- Strategic context informs product decisions (understanding customer needs, pipeline)
-- Feeling integrated as product development lead (not external consultant)
+**Duration:** 60 minutes (as Miguel recommended previously for account setup and orientation)
 
 ---
 
 **Next Steps:**
-1. Miguel reviews this proposal
-2. Schedule onboarding session
-3. Establish weekly 1:1 cadence
-4. Confirm all-hands meeting inclusion
+1. Schedule onboarding session
+2. Establish weekly 1:1 cadence
+3. Confirm all-hands meeting inclusion
