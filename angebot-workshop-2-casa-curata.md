@@ -1,181 +1,127 @@
-# Kommunale Fördermittel-Suchplattform
+# Angebot: Workshop 2 - Requirements Definition
 
-### Workshop 2 Angebot
+**Casa Curata UG**
 
-## 1. Executive Summary (Zusammenfassung)
-
-Basierend auf Workshop 1 vom 18.10.2025 umfasst dieses Angebot die Anforderungsdefinition und POC-Scoping für die kommunale Fördermittel-Suchplattform.
-
-**Workshop-Schwerpunkte:**
-
-- **Paketlogik-Definition:** Wie Förderprogramme den Gemeinden präsentiert werden
-- **Website-Umfang & Branding:** Designanforderungen und visuelle Identität
-- **Erfolgskennzahlen:** Definition messbarer Projektergebnisse
-- **Datenbank-Zugangs-Recherche:** Technische Machbarkeit der Förderdaten-Quellen
-
-**Ergebnis:** Anforderungsspezifikation mit fundierter POC-Kostenschätzung.
+**Datum:** 2025-11-18
+**Investition:** €2.400,00
 
 ---
 
-## 2. POC Vision: Kommunale Fördermittel-Suchplattform
+## 1. Workshop Überblick
 
-### Übergeordnetes Ziel
+Workshop 2 definiert alle offenen Requirements für die Kommunale Fördermittel-Suchplattform. Dieser zweiphasige Workshop umfasst technische Vorabklärung (remote) und kollaborative Requirements-Definition (on-site). Das Ergebnis ist eine vollständige Spezifikation, die als Grundlage für die POC-Entwicklung dient.
 
-Gemeinden befähigen, relevante Förderprogramme zu finden und durch digitale Selbstbedienung zu Vereinsmitgliedschaften zu konvertieren.
+**Struktur:**
+- Phase 1: Förderdatenbank-Recherche (1 Tag remote)
+- Phase 2: On-Site Requirements Workshop (1 Tag on-site)
 
-### Erfolgskriterien
-
-Was Erfolg für diesen POC bedeutet:
-
-- **Skalierung der Reichweite:** Von aktuell 70 manuell betreuten Gemeinden auf ein Modell, das 5.000 Gemeinden bundesweit erreichen kann - ohne proportionale Erhöhung des Personalaufwands oder Reisekosten
-- **Steigerung der Vereinsmitgliedschaften:** Messbare Zunahme der Neuanmeldungen durch digitale Lead-Generierung
-
-*Hinweis: Detaillierte Architektur, technische Spezifikationen und Implementierungsansatz werden während Workshop 2 definiert.*
+**Gesamtdauer:** 2 Tage
 
 ---
 
-## 3. Workshop-Struktur
+## 2. Workshop Agenda
 
-**Datum:** *Zu definieren*
+### Phase 1: Förderdatenbank-Auswahl (1 Tag Remote)
 
-**Ort:** *München (vor Ort)*
+**Technische Evaluation der Förderdatenbanken:**
+- Unabhängige Bewertung von Förderdatenbank, KfW, BAFA und weiteren Quellen
+- API-Verfügbarkeit und Dokumentationsprüfung
+- Web Scraping-Komplexitätsanalyse
+- Vergleichsmatrix mit Empfehlungen erstellen
+- Auswahlbegründung dokumentieren
 
-**Dauer:** *0.5 Tage vor Ort, 1.5 Tage Einzelarbeit*
+**Deliverable:** Datenbank-Auswahlbericht mit technischer Machbarkeitsanalyse
 
-### Vor-Ort-Agenda
+### Phase 2: On-Site Requirements Workshop (1 Tag)
 
-#### Vormittag
+**Einzelne fokussierte Session mit folgenden Themenbereichen:**
 
-- **Paket Logik:** Wie Förderprogramme den Gemeinden präsentiert werden
-- **Erfolgskennzahlen:** Messbare Projektziele und KPIs definieren
-- **Website & Branding:** Designanforderungen und visuelle Identität festlegen
-
-### Einzelarbeit (Berater)
-
-*Technische Arbeit: Recherche, Dokumentation, Schätzung*
-
-- **Datenbank-Zugangs-Recherche:** Förderdatenbanken APIs/Zugriff prüfen *(1 Tag)*
-- **Architektur & POC-Kostenschätzung:** Technisches Design und Kostenberechnung *(0.5 Tage)*
-
----
-
-## 4. Investitionsübersicht
-
-| Komponente | Investition (EUR) |
-| :---- | :---- |
-| Vor-Ort-Workshop (0.5 Tage) | 600 |
-| Datenbank-Zugangs-Recherche (1 Tag) | 1.200 |
-| Architektur & POC-Kostenschätzung (0.5 Tage) | 600 |
-| **Gesamt** | **2.400 EUR** |
-
-*Exklusive MwSt.*
-
----
-
-## 5. Erwartete Geschäfts Wirkung
-
-**Aktueller Zustand:**
-
-Manuelle Gemeindebetreuung durch persönliche Vor-Ort-Besuche. Reichweite auf ca. 70 Kontakte limitiert durch Zeit- und Reiseaufwand. Nicht skalierbar für bundesweite Expansion.
-
-**Zukünftiger Zustand:**
-
-Digitale Selbstbedienungsplattform ermöglicht Gemeinden eigenständige Fördermittelsuche und Vereinsbeitritt ohne persönliche Termine. Bundesweite Skalierung ohne proportionale Kostenerhöhung.
-
-**Zentrale Vorteile:**
-
-- **Skalierung der Reichweite:** Von 70 auf 5.000 erreichbare Gemeinden bundesweit
-- **Zeiteffizienz:** Reduzierung von wochenlanger manueller Kontaktaufnahme auf sofortigen digitalen Zugang
-- **Kostenreduktion:** Eliminierung von Reisekosten und Zeitaufwand für Vor-Ort-Termine
-
-*Hinweis: Präzise Metriken und KPIs werden während des Workshop 2 definiert.*
-
----
-
-## 6. Workshop-Lieferumfang
-
-**Anforderungsspezifikation** *(~5-10 Seiten)* beinhaltend:
-
-Die Spezifikation dokumentiert alle Workshop-Entscheidungen sowie deren technische Umsetzung:
-
-### 1. Funding Database Selection
-
-**Aufwand: 1 Tag (Remote)**
-
-Independent technical evaluation of Förderdatenbank, KfW, BAFA, and other funding sources:
-
-- API availability and documentation review
-- Web scraping difficulty assessment
-- Data freshness and update frequency evaluation
-- Create comparison matrix with recommendations
-- Document selection rationale
-
-**Deliverable:** Database selection report with technical feasibility analysis
-
-### 2. On-Site Requirements Workshop
-
-**Aufwand: 0.5 Tage (On-Site)**
-
-Single focused session covering all remaining requirements definition:
-
-**Questionnaire Structure Definition:**
-- Facilitate questionnaire design session
-- Document detailed specification (fields, validation, conditional logic)
-- **Deliverable:** Field inventory with conditional logic and validation rules
+**Fragebogen-Struktur Definition:**
+- Gemeinsame Entwicklung der Fragebogen-Architektur
+- Detaillierte Spezifikation (Felder, Validierung, bedingte Logik)
+- Field Inventory mit Conditional Logic und Validierungsregeln
 
 **Content & Copywriting:**
-- Facilitate content/messaging session
-- Create content outline
-- **Deliverable:** Landing page content (hero, about, how it works)
+- Gemeinsame Entwicklung der Website-Inhalte
+- Hero-Section-Messaging
+- "Über uns"-Beschreibung
+- "So funktioniert's"-Ablauf
 
 **Branding Guidelines:**
-- Branding review session
-- Document style guide
-- **Deliverable:** Logo files, color palette, font specifications
+- Branding-Review-Session
+- Dokumentation Style Guide
+- Logo-Dateien, Farbpalette, Schriftart-Spezifikationen
 
-**Package Categorization:**
-- Facilitate package definition session
-- Document package specifications
-- **Deliverable:** Package list with categorization rules and criteria
-- *Note: Implementation deferred to post-POC*
+**Paket-Kategorisierung:**
+- Definition der Paket-Struktur
+- Dokumentation Paket-Spezifikationen
+- Kategorisierungsregeln und Kriterien
+- **Hinweis:** Implementierung erfolgt nach POC
 
-**Non-Functional Requirements & Evaluation Criteria:**
-- Combined NFRs + evaluation criteria session
-- Documentation
-- **Deliverable:** Minimal NFR notes and evaluation criteria specification
-
-*Note: Funding database research conducted remotely by contractor. On-site workshop covers all other requirements in single focused session. Workshop 2 deliverables enable POC implementation by defining all outstanding requirements.*
+**Non-Functional Requirements & Evaluationskriterien:**
+- Kombinierte NFRs + Evaluationskriterien-Session
+- Minimale NFR-Notizen
+- Evaluationskriterien-Spezifikation
 
 ---
 
-## 7. Vorbereitung Anforderungen
+## 3. Lieferumfang
 
-**Kunde stellt bereit:**
+Nach Abschluss von Workshop 2 erhalten Sie:
 
-- [ ] Antragsformular für Vereinsmitgliedschaft
-- [ ] Fragebogen-Struktur für Fördermittelsuche (falls vorhanden)
-- [ ] Workshop-Teilnehmer bestätigt
-- [ ] *Idea Kitchen, München* (Besprechungsort)
+**Vollständig dokumentierte Requirements-Spezifikation:**
+- Finalisierte Fragebogen-Struktur mit Feldern und Validierung
+- Paket-Kategorisierungsregeln
+- Ausgewählte Förderdatenbank mit Integrationsplan
+- Evaluationskriterien für POC-Validierung
+- Content-Outline für Landing Page (Hero, About, How it works)
+- Branding Guidelines (Logo, Farbpalette, Fonts)
 
----
+**Datenbank-Auswahlbericht:**
+- Technische Machbarkeitsanalyse
+- Vergleichsmatrix verschiedener Förderdatenquellen
+- Empfehlung mit Begründung
 
-## 8. Vertragsbedingungen
-
-**Zahlung:**
-
-- 50% bei Vertragsunterzeichnung
-- 50% bei Fertigstellung der Lieferumfänge
-- Zahlungsziel: *14 Tage netto*
-
-**Gültigkeit:**
-*Bis 31.12.2025*
-
-**POC-Anrechnung:**
-Workshop-Investition wird zu 100% angerechnet, falls POC beauftragt wird
+**Dokumentation:**
+- Diese Spezifikation bildet die Grundlage für POC-Entwicklung und zukünftige Erweiterungen
+- Alle offenen Requirements sind definiert und dokumentiert
 
 ---
 
-*Erstellt: 18.11.2025*
+## 4. Ihre Mitwirkungspflichten
 
-*Marius Wilsch | Wilsch AI Services*
-*‭+49 155 66239974‬ | marius@wilsch-ai.com*
+Für den erfolgreichen Abschluss von Workshop 2 benötigen wir:
+
+**On-Site Teilnahme:**
+- Relevante Stakeholder für 1 Tag on-site verfügbar
+- Entscheidungsbefugte Personen für finale Spezifikationen
+
+**Kollaborative Beteiligung:**
+- Gemeinsame Entwicklung der Fragebogen-Struktur
+- Festlegung der Paket-Kategorisierung
+- Input zu Content und Messaging
+- Bereitstellung von Branding-Assets (Logo, Farbpalette)
+
+**Domänenwissen:**
+- Expertise zur Fördermittel-Landschaft
+- Verständnis der Gemeinde-Bedürfnisse
+- Fachliche Validierung der Anforderungen
+
+---
+
+## 5. Investition
+
+**Gesamtkosten Workshop 2:** €2.400,00
+
+**Kostenstruktur:**
+- Tagessatz: €1.200/Tag
+- Phase 1 (Remote): 1 Tag
+- Phase 2 (On-Site): 1 Tag
+
+**Nächster Schritt:**
+
+Nach Angebotsannahme startet die Förderdatenbank-Recherche (1 Tag remote), gefolgt vom On-Site Requirements Workshop (1 Tag). Anschließend liegt eine vollständige Requirements-Spezifikation vor, die die Grundlage für die POC-Entwicklung bildet.
+
+---
+
+**Hinweis:** Dieses Angebot fokussiert ausschließlich auf Workshop 2 (Requirements-Definition). Die POC-Entwicklung ist ein separates Engagement und wird nach Workshop 2 auf Basis der definierten Requirements kalkuliert.
