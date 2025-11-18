@@ -5,6 +5,31 @@
 
 ---
 
+## Core Requirements
+
+This implementation addresses two fundamental requirements:
+
+### 1. Bypass LibreChat Authentication
+**Goal:** Users never see a LibreChat login screen
+
+**Approach:** Leverage Okta SSO via `OPENID_AUTO_REDIRECT=true`
+- User logs into Bruce BEM (creates Okta session)
+- LibreChat auto-redirects to Okta for authentication
+- Okta recognizes existing session (no login prompt)
+- User authenticated instantly (~500ms)
+
+### 2. Get Bearer + User Tokens for MCP API Requests
+**Goal:** MCP server can make authenticated Bruce BEM API calls as specific users
+
+**Approach:** Dual-token system
+- **Bearer Token:** Application-level OAuth token (static, from `.env`)
+- **userToken:** User-specific token (dynamic, delivered per user)
+- **Both tokens required** for Bruce BEM API calls
+
+**Token Delivery:** Rain provides userToken (and optionally refreshToken) via iframe URL when user opens chat
+
+---
+
 ## 1. Overview
 
 ### Current State
@@ -37,13 +62,13 @@
 
 ### Token Systems
 - userToken comes from Bruce BEM `/users/getusertoken` endpoint
-- userToken is short-lived (5-15 minutes)
+- userToken is short-lived (1 hour / 3600 seconds)
 - Okta manages its own OAuth tokens separately
 - Both token types required for complete functionality
 
 ### Configuration Access
-- Ryan can configure LibreChat as Okta OAuth client
-- Ryan has access to Okta admin console
+- Rain can configure LibreChat as Okta OAuth client
+- Rain has access to Okta admin console
 - LibreChat deployment accessible at defined URL
 
 ### Browser Environment
@@ -62,7 +87,7 @@
 - User redirected back to Bruce BEM
 
 **Step 2: User Opens Chat Interface**
-- Ryan generates userToken from Bruce BEM
+- Rain generates userToken from Bruce BEM
 - Opens iframe: `https://chat.example.com/?userToken=abc123xyz`
 
 **Step 3: LibreChat Auto-Redirects to Okta**
@@ -98,30 +123,45 @@
 
 ---
 
-## 4. What We Need From Ryan
+## 4. What We Need From Rain
 
 ### Required Outcome
-Deliver userToken to chat interface via iframe URL query parameter when user opens chat.
+Deliver userToken (and optionally refreshToken) to chat interface via iframe URL query parameter when user opens chat.
 
 ### Format
+
+**Option A: userToken Only (Simpler)**
 ```
 https://chat.example.com/?userToken=<generated_token>
 ```
 
+**Option B: Both Tokens (Enables Auto-Refresh)**
+```
+https://chat.example.com/?userToken=<user_token>&refreshToken=<refresh_token>
+```
+
 ### Token Source
-- Same token Bruce BEM uses internally for API calls
-- Obtained from `/users/getusertoken` endpoint
+- Both tokens come from `/users/getusertoken` endpoint response
+- Endpoint returns: `accessToken` (userToken), `refreshToken`, `expiresIn`
 - Generated with: username + password + clientId
 
 ### Timing
-- Token generated when user clicks to open chat
+- Tokens generated when user clicks to open chat
 - Passed immediately in iframe URL
-- Token already valid when iframe loads
+- Tokens already valid when iframe loads
 
-### Lifecycle
-- Token expires after 5-15 minutes (Bruce BEM controlled)
-- No automatic refresh mechanism
-- User may need to re-open chat after expiration
+### Lifecycle & Refresh Strategy
+
+**If Rain Provides Both Tokens (Option B):**
+- userToken expires after 1 hour (3600 seconds)
+- MCP server can automatically refresh using refreshToken
+- Users can stay in chat sessions > 1 hour without interruption
+- Refresh happens via `/users/refreshtoken` endpoint
+
+**If Rain Provides userToken Only (Option A):**
+- userToken expires after 1 hour (3600 seconds)
+- No automatic refresh capability
+- User must re-open chat to get fresh token after expiration
 
 ---
 
@@ -225,13 +265,20 @@ mcpServers:
 ### MCP Server Architecture
 
 **Token Extraction:**
-- Middleware extracts `X-User-Token` from HTTP headers
+- Middleware extracts `X-User-Token` and `X-Refresh-Token` from HTTP headers
 - Stores in request-scoped FastMCP Context
 
 **Authentication Isolation:**
 - Remove singleton BruceBEMClient instance
 - Implement per-request token handling
 - Each user request gets independent Context
+
+**Token Refresh (If refreshToken Provided):**
+- Store refreshToken in Context alongside userToken
+- Track token expiration time (from `expiresIn`)
+- Proactively refresh when 90% of lifetime elapsed
+- Reactive fallback: Retry on 401/403 errors with refresh
+- Update Context with fresh tokens after refresh
 
 **API Integration:**
 - Extract userToken from Context per request
@@ -261,7 +308,7 @@ mcpServers:
 - Managed automatically by LibreChat + Okta
 
 **Bruce BEM userToken:**
-- Short-lived: 5-15 minutes
+- Short-lived: 1 hour (3600 seconds)
 - Not refreshable by Okta (separate system)
 - Expires independent of OAuth session
 
@@ -298,7 +345,7 @@ mcpServers:
 **Dependencies:**
 
 - User logs into Bruce BEM first (creates Okta session)
-- Ryan provides userToken via iframe URL
+- Rain provides userToken via iframe URL
 - LibreChat configured as Okta OAuth client
 - Custom code extracts and routes userToken
 
