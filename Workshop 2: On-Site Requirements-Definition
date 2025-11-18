@@ -1,0 +1,85 @@
+# Workshop 2: On-Site Requirements-Definition  
+**KI-gestützte Kommunale Fördermittel-Suchplattform (POC)**
+
+## Ziel des Workshops
+Gemeinsame finale Definition aller noch offenen Anforderungen aus dem Pflichtenheft, um den exakten Scope und damit den verbindlichen Preis des POC festzulegen. Das aktuelle Angebot ist ein unverbindliches Richtpreisangebot – erst nach Workshop 2 liegt die verbindliche, dokumentierte Spezifikation vor, auf deren Basis die Entwicklung startet.
+
+## Termin, Dauer, Ort & Kosten
+- **Gesamtdauer Workshop 2:** 2 Tage  
+  - Tag 1: Remote – Förderdatenbank-Recherche & Auswahlvorbereitung (durch Wilsch AI Services)  
+  - Tag 2: 1 voller Tag on-site bei Casa Curata UG (alternativ: Casa Curata UG reist zum Contractor – nach Absprache)  
+  - Optional: bis zu 0,5–1 Tag Nachbereitung (Dokumentation finalisieren)  
+- **Tagessatz:** € 1.200 / Tag  
+- **Gesamtkosten Workshop 2:** € 2.400,00 (bei Bedarf bis € 3.600,00 bei 3 Tagen)  
+- **Zeitpunkt:** Direkt nach Angebotsannahme
+
+## Erforderliche Teilnehmer von Casa Curata UG
+- Entscheidungsbefugte Personen (müssen finale Festlegungen sofort treffen können)  
+- Fördermittel-Experten von Casa Curata UG mit tiefgehendem Wissen zur Förderlandschaft  
+- Personen mit Kenntnissen zur Markenwahrnehmung, Zielgruppen-Ansprache und gewünschtem Tonfall gegenüber Gemeinden
+
+## Inhalt & Ablauf von Workshop 2
+
+### Teil 1 – Remote (1 Tag, vor dem on-site Termin, durch Wilsch AI Services)
+**Förderdatenbank-Recherche & technische Machbarkeitsanalyse**
+
+- Technische Evaluierung relevanter Förderquellen (u. a. Förderdatenbank.de, KfW, BAFA, EU-Programme, etc.)  
+- Prüfung von API-Verfügbarkeit, Dokumentationsqualität und Scraping-Komplexität  
+- Erstellung einer Vergleichsmatrix mit Empfehlungen  
+- Dokumentation der Auswahlempfehlung inkl. Begründung  
+**Liefergegenstand:** Database-Selection-Report (wird vor dem on-site Termin versendet)
+
+### Teil 2 – On-Site (1 voller Tag, gemeinsam)
+Gemeinsame verbindliche Festlegung aller noch offenen Anforderungen:
+
+1. **Fragebogen-Struktur & Logik**  
+   - Exakte Felder, Reihenfolge, Formulierungen  
+   - Bedingte Logik (welche Fragen erscheinen wann)  
+   - Validierungsregeln und Fehlermeldungen  
+   - Gewünschtes Look & Feel des Formulares
+
+2. **Paket-Kategorisierung (Definition – Implementierung erst post-POC)**  
+   - Festlegung der Kategorien (z. B. Digitalisierung klein/mittel/groß, Klimaschutz, Infrastruktur etc.)  
+   - Zuordnungskriterien und Regeln  
+   - Bezeichnungen und Beschreibungen der Pakete
+
+3. **Endgültige Auswahl der primären Förderdatenbank für den POC**  
+   - Entscheidung basierend auf dem vorbereiteten Database-Selection-Report  
+   - Grober Integrationsplan (Scraping-Strategie oder API-Nutzung)
+
+4. **Evaluationskriterien & Relevanz-Bewertung**  
+   - Gewichtung der Matching-Faktoren (inhaltlich, Budget, Gemeindegröße, etc.)  
+   - Mindest-Relevanz-Score für Anzeige  
+   - Regeln für geschätzte Förderbeträge und -quoten
+
+5. **Branding & visuelle Identität**  
+   - Logo-Dateien (Formate, Varianten)  
+   - Farbpalette, Schriftarten, Icon-Stil  
+   - Gewünschte Markenwahrnehmung und Tonalität
+
+6. **Content & Messaging der Landing Page**  
+   - Texte für Hero-Section (Value Proposition + CTA)  
+   - „So funktioniert’s“-Ablauf (3–4 Schritte)  
+   - „Über uns“-Abschnitt (Mission des Klimafolgenschutzvereins)  
+   - Trust-Elemente und Benefits für Gemeinden  
+   - Alle weiteren statischen Texte
+
+7. **Nicht-funktionale Anforderungen & Success-Criteria-Feinabstimmung**  
+   - Performance-Erwartungen, Datenschutz-Hinweise, Impressum/Link-Liste etc.
+
+## Konkrete Liefergegenstände nach Abschluss von Workshop 2
+- **Vollständige, verbindliche Requirements-Spezifikation** (Grundlage für Entwicklung und finalen Festpreis)  
+- Finalisierter Fragebogen (Felder, Logik, Validierung, Texte)  
+- Definiertes Paket-Kategorisierungsmodell  
+- Ausgewählte Förderdatenbank + technischer Integrationsplan  
+- Evaluations- und Relevanzkriterien  
+- Styleguide (Logo, Farben, Schriften)  
+- Komplette Landing-Page-Texte und Messaging  
+- Database-Selection-Report (inkl. Begründung)
+
+## Nächste Schritte nach dem Workshop
+1. Casa Curata UG prüft und gibt die finale Requirements-Spezifikation frei (innerhalb von 2–3 Werktagen)  
+2. Wilsch AI Services erstellt verbindliches Festpreisangebot auf Basis der fixierten Spezifikation  
+3. Bei Annahme startet sofort die POC-Entwicklung – keine weiteren Klärungsrunden mehr nötig
+
+Dieser Workshop 2 ist die zentrale Voraussetzung, um aus dem aktuellen Richtpreisangebot ein verbindliches Projekt mit planbarem Aufwand und Preis zu machen.
