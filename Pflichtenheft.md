@@ -16,99 +16,99 @@
 
 ## Section 2: Goal Determination (Zielbestimmung)
 
-### Must (POC Scope)
+### Muss (POC-Umfang)
 
-- Website with landing page for Klimafolgenschutzverein targeting municipalities  
-- Interactive questionnaire to capture project details (type, scope, budget, municipality info)  
-- AI-powered semantic search of funding databases (starting with one database)  
-- Display of relevant funding programs with estimated amounts and percentages (2-3 results)  
-- Package-based categorization for standardized projects (digitalization, climate protection, infrastructure)  
-- Lead generation flow directing to association membership application  
-- Data capture for follow-up consultation
+- Website mit Landing Page für Klimafolgenschutzverein mit Zielgruppe Gemeinden
+- Interaktiver Fragebogen zur Erfassung von Projektdetails (Typ, Umfang, Budget, Gemeindeinformationen)
+- KI-gestützte semantische Suche in Förderdatenbanken (beginnend mit einer Datenbank)
+- Anzeige relevanter Förderprogramme mit geschätzten Beträgen und Prozentsätzen (2-3 Ergebnisse)
+- Paketbasierte Kategorisierung für standardisierte Projekte (Digitalisierung, Klimaschutz, Infrastruktur)
+- Lead-Generierung mit Weiterleitung zur Vereinsmitgliedschaft
+- Datenerfassung für Folgeberatung
 
-### Deferred (Post-POC)
+### Zurückgestellt (Nach POC)
 
-- Document upload capability (cost estimates, planning documents from architects)  
-- Direct funding application submission through platform interface  
-- Browser automation for filling external funding forms  
-- Detailed personalized consultation and advisory services  
-- Integration with EE-Mann (energy efficiency expert) workflow
+- Dokumenten-Upload-Funktion (Kostenvoranschläge, Planungsdokumente von Architekten)
+- Direkte Förderantragstellung über Plattform-Schnittstelle
+- Browser-Automation zum Ausfüllen externer Förderformulare
+- Detaillierte personalisierte Beratungs- und Betreuungsleistungen
+- Integration mit EE-Mann (Energieeffizienz-Experte) Workflow
 
 ---
 
 ## Section 3: Functional Requirements (Funktionale Anforderungen)
 
-### Must (POC Scope)
+### Muss (POC-Umfang)
 
-**Website with landing page for Klimafolgenschutzverein targeting municipalities**
+**Website mit Landing Page für Klimafolgenschutzverein mit Zielgruppe Gemeinden**
 
-- **FR-07:** System shall provide informational content about Klimafolgenschutzverein mission and services.
+- **FR-07:** System stellt Informationsinhalte über Mission und Leistungen des Klimafolgenschutzvereins bereit.
 
-**Interactive questionnaire to capture project details**
+**Interaktiver Fragebogen zur Erfassung von Projektdetails**
 
-- **FR-01:** System shall provide interactive questionnaire to collect project details including type (digitalization, climate protection, infrastructure), scope, budget, and municipality information.
+- **FR-01:** System stellt interaktiven Fragebogen bereit zur Erfassung von Projektdetails einschließlich Typ (Digitalisierung, Klimaschutz, Infrastruktur), Umfang, Budget und Gemeindeinformationen.
 
-**AI-powered semantic search of funding databases**
+**KI-gestützte semantische Suche in Förderdatenbanken**
 
-- **FR-02:** System shall search one funding database (specific source TBD in Workshop 2\) using semantic matching based on questionnaire inputs.
+- **FR-02:** System durchsucht eine Förderdatenbank (spezifische Quelle in Workshop 2 festzulegen) mittels semantischer Übereinstimmung basierend auf Fragebogen-Eingaben.
 
-**Display of relevant funding programs with estimated amounts and percentages**
+**Anzeige relevanter Förderprogramme mit geschätzten Beträgen und Prozentsätzen**
 
-- **FR-03:** System shall display 2-3 relevant funding programs with estimated amounts, percentage ranges, and program descriptions.
+- **FR-03:** System zeigt 2-3 relevante Förderprogramme mit geschätzten Beträgen, Prozentbereichen und Programmbeschreibungen an.
 
-**Package-based categorization for standardized projects**
+**Paketbasierte Kategorisierung für standardisierte Projekte**
 
-- **FR-04:** System shall categorize projects into predefined packages (e.g., digitalization small/medium/large, infrastructure, climate measures).
+- **FR-04:** System kategorisiert Projekte in vordefinierte Pakete (z.B. Digitalisierung klein/mittel/groß, Infrastruktur, Klimaschutzmaßnahmen).
 
-**Lead generation flow directing to association membership application**
+**Lead-Generierung mit Weiterleitung zur Vereinsmitgliedschaft**
 
-- **FR-05:** System shall direct users to association membership application form after displaying funding opportunities.
+- **FR-05:** System leitet Benutzer nach Anzeige der Fördermöglichkeiten zum Mitgliedsantrag des Vereins weiter.
 
-**Data capture for follow-up consultation**
+**Datenerfassung für Folgeberatung**
 
-- **FR-06:** System shall capture and store municipality contact information and identified funding interests for follow-up consultation.
+- **FR-06:** System erfasst und speichert Kontaktinformationen der Gemeinde und identifizierte Förderinteressen für Folgeberatung.
 
 ### 
 
-### Deferred (Post-POC)
+### Zurückgestellt (Nach POC)
 
-**Document upload capability**
+**Dokumenten-Upload-Funktion**
 
-- **FR-08:** System shall accept document uploads (cost estimates, planning documents) for enhanced funding search precision.
+- **FR-08:** System akzeptiert Dokumenten-Uploads (Kostenvoranschläge, Planungsdokumente) für präzisere Fördermittelsuche.
 
-**Direct funding application submission through platform interface**
+**Direkte Förderantragstellung über Plattform-Schnittstelle**
 
-- **FR-09:** System shall enable direct submission of funding applications to BAFA/KfW portals on behalf of municipalities.
+- **FR-09:** System ermöglicht direkte Einreichung von Förderanträgen an BAFA/KfW-Portale im Namen der Gemeinden.
 
-**Integration with EE-Mann (energy efficiency expert) workflow**
+**Integration mit EE-Mann (Energieeffizienz-Experte) Workflow**
 
-- **FR-10:** System shall integrate with EE-Mann workflow for projects requiring expert validation.
+- **FR-10:** System integriert mit EE-Mann-Workflow für Projekte die Expertenvalidierung erfordern.
 
-### Functional Requirement Dependencies
+### Funktionale Anforderungsabhängigkeiten
 
-**FR-02 depends on FR-01**
+**FR-02 hängt ab von FR-01**
 
-- Questionnaire (FR-01) collects structured project parameters that the AI semantic search (FR-02) uses to query funding databases effectively.
+- Fragebogen (FR-01) erfasst strukturierte Projektparameter, die die KI-semantische Suche (FR-02) verwendet, um Förderdatenbanken effektiv abzufragen.
 
-**FR-03 depends on FR-02**
+**FR-03 hängt ab von FR-02**
 
-- Search must complete (FR-02) and return results before the system can display funding programs (FR-03) to the user.
+- Suche muss abgeschlossen sein (FR-02) und Ergebnisse zurückgeben, bevor System Förderprogramme (FR-03) dem Benutzer anzeigen kann.
 
-**FR-04 depends on FR-01**
+**FR-04 hängt ab von FR-01**
 
-- Package categorization (FR-04) uses project details from questionnaire (FR-01) to classify the project into predefined standardized offerings.
+- Paketkategorisierung (FR-04) verwendet Projektdetails aus Fragebogen (FR-01), um Projekt in vordefinierte standardisierte Angebote zu klassifizieren.
 
-**FR-05 depends on FR-03**
+**FR-05 hängt ab von FR-03**
 
-- User must first see funding opportunities (FR-03) before being directed to membership application (FR-05) as part of lead generation flow.
+- Benutzer muss zuerst Fördermöglichkeiten sehen (FR-03), bevor er zum Mitgliedsantrag weitergeleitet wird (FR-05) im Rahmen der Lead-Generierung.
 
-**FR-06 depends on FR-01, FR-03**
+**FR-06 hängt ab von FR-01, FR-03**
 
-- Data capture (FR-06) stores both questionnaire inputs (FR-01) and which funding results (FR-03) the user viewed for follow-up consultation purposes.
+- Datenerfassung (FR-06) speichert sowohl Fragebogen-Eingaben (FR-01) als auch welche Förderergebnisse (FR-03) der Benutzer ansah für Folgeberatungszwecke.
 
-**FR-09 depends on FR-08** (Deferred)
+**FR-09 hängt ab von FR-08** (Zurückgestellt)
 
-- Document uploads (FR-08) provide the detailed cost data needed to pre-fill direct application submissions (FR-09) to funding portals.
+- Dokumenten-Uploads (FR-08) liefern die detaillierten Kostendaten, die zum Vorausfüllen direkter Antragseinreichungen (FR-09) an Förderportale benötigt werden.
 
 ---
 
@@ -120,48 +120,48 @@ Non-functional requirements (performance, security, compatibility, and usability
 
 ## Section 5: Abnahmekriterien (Acceptance Criteria)
 
-| Requirement ID | Acceptance Test | Expected Outcome |
+| Anforderungs-ID | Abnahmetest | Erwartetes Ergebnis |
 | :---- | :---- | :---- |
-| FR-01 | Given user accesses website, when questionnaire loads | Then all required input fields are displayed and functional |
-| FR-02 | Given questionnaire submitted, when search executes | Then funding programs from specified database are returned |
-| FR-03 | Given search completes, when results display | Then 2-3 relevant funding programs shown with percentage ranges and amounts |
-| FR-04 | Given project details submitted, when categorization executes | Then project is assigned to appropriate package category |
-| FR-05 | Given results displayed, when user views page | Then membership application CTA is visible and functional |
-| FR-06 | Given user interactions complete, when data capture executes | Then municipality contact info and funding interests are stored |
-| FR-07 | Given user accesses landing page, when page loads | Then Klimafolgenschutzverein informational content is displayed |
+| FR-01 | Wenn Benutzer Website aufruft und Fragebogen lädt | Dann werden alle erforderlichen Eingabefelder angezeigt und sind funktionsfähig |
+| FR-02 | Wenn Fragebogen eingereicht wird und Suche ausgeführt wird | Dann werden Förderprogramme aus angegebener Datenbank zurückgegeben |
+| FR-03 | Wenn Suche abgeschlossen ist und Ergebnisse angezeigt werden | Dann werden 2-3 relevante Förderprogramme mit Prozentbereichen und Beträgen angezeigt |
+| FR-04 | Wenn Projektdetails eingereicht werden und Kategorisierung ausgeführt wird | Dann wird Projekt der entsprechenden Paketkategorie zugewiesen |
+| FR-05 | Wenn Ergebnisse angezeigt werden und Benutzer Seite ansieht | Dann ist Mitgliedsantrags-CTA sichtbar und funktionsfähig |
+| FR-06 | Wenn Benutzerinteraktionen abgeschlossen sind und Datenerfassung ausgeführt wird | Dann werden Gemeinde-Kontaktinformationen und Förderinteressen gespeichert |
+| FR-07 | Wenn Benutzer Landing Page aufruft und Seite lädt | Dann werden Klimafolgenschutzverein-Informationsinhalte angezeigt |
 
-### Deferred Acceptance Criteria (Post-POC)
+### Zurückgestellte Abnahmekriterien (Nach POC)
 
-| Requirement ID | Acceptance Test | Expected Outcome |
+| Anforderungs-ID | Abnahmetest | Erwartetes Ergebnis |
 | :---- | :---- | :---- |
-| FR-08 | Given user uploads document, when file processing completes | Then document content is extracted and used to enhance search |
-| FR-09 | Given funding program selected, when submission initiates | Then application data is transmitted to appropriate portal (BAFA/KfW) |
-| FR-10 | Given project requires EE-Mann, when workflow triggers | Then expert validation process is initiated |
+| FR-08 | Wenn Benutzer Dokument hochlädt und Dateiverarbeitung abgeschlossen ist | Dann wird Dokumentinhalt extrahiert und zur Suchverbesserung verwendet |
+| FR-09 | Wenn Förderprogramm ausgewählt wird und Einreichung initiiert wird | Dann werden Antragsdaten an entsprechendes Portal übermittelt (BAFA/KfW) |
+| FR-10 | Wenn Projekt EE-Mann erfordert und Workflow ausgelöst wird | Dann wird Expertenvalidierungsprozess initiiert |
 
 ---
 
 ## Section 6: Technische Rahmen- oder Randbedingungen (Technical Constraints)
 
-### Deployment Environment
+### Deployment-Umgebung
 
-- **Backend:** Hetzner server (Frankfurt datacenter)  
-- **Frontend:** Vercel platform  
-- Cloud-based architecture with separation of concerns
+- **Backend:** Hetzner Server (Rechenzentrum Frankfurt)
+- **Frontend:** Vercel Plattform
+- Cloud-basierte Architektur mit Trennung der Zuständigkeiten
 
-### Required Integrations
+### Erforderliche Integrationen
 
-- Initial integration with one funding database (specific source TBD in Workshop 2: Förderdatenbank, KfW, or BAFA)  
-- Integration method to be determined in Workshop 2 (API access vs web scraping)  
-- Additional databases deferred to post-POC
+- Initiale Integration mit einer Förderdatenbank (spezifische Quelle in Workshop 2 festzulegen: Förderdatenbank, KfW oder BAFA)
+- Integrationsmethode in Workshop 2 festzulegen (API-Zugriff vs. Web Scraping)
+- Zusätzliche Datenbanken auf Nach-POC verschoben
 
-### Technology Stack Decisions
+### Technologie-Stack-Entscheidungen
 
-- **Backend Framework:** FastAPI (Python)  
-- **Frontend Framework:** React  
-- **Database:** Supabase (for municipality contact data and search results storage)  
-- **Deployment:** Backend on Hetzner, Frontend on Vercel  
-- **API Communication:** REST API between React frontend and FastAPI backend  
-- **Authentication:** No user authentication required for POC (public access for municipalities)
+- **Backend Framework:** FastAPI (Python)
+- **Frontend Framework:** React
+- **Datenbank:** Supabase (für Gemeinde-Kontaktdaten und Suchergebnisspeicherung)
+- **Deployment:** Backend auf Hetzner, Frontend auf Vercel
+- **API-Kommunikation:** REST API zwischen React Frontend und FastAPI Backend
+- **Authentifizierung:** Keine Benutzerauthentifizierung für POC erforderlich (öffentlicher Zugriff für Gemeinden)
 
 ---
 
@@ -171,66 +171,66 @@ Non-functional requirements (performance, security, compatibility, and usability
 
 ## Section 8: Domain Glossary (Glossar / Fachglossar)
 
-### Key Terms
+### Schlüsselbegriffe
 
 **Fördermittel**
 
-- Government subsidies or grants provided to municipalities for public projects.
+- Staatliche Zuschüsse oder Beihilfen für Gemeinden für öffentliche Projekte.
 
 **Förderdatenbank**
 
-- Central German database containing information about available funding programs from various sources.
+- Zentrale deutsche Datenbank mit Informationen über verfügbare Förderprogramme aus verschiedenen Quellen.
 
 **Gemeinde**
 
-- Municipality or local government entity in Germany.
+- Kommune oder lokale Regierungseinheit in Deutschland.
 
 **KfW (Kreditanstalt für Wiederaufbau)**
 
-- German state-owned development bank providing subsidized loans and grants for infrastructure and climate projects.
+- Staatliche deutsche Förderbank, die subventionierte Darlehen und Zuschüsse für Infrastruktur- und Klimaprojekte bereitstellt.
 
 **BAFA (Bundesamt für Wirtschaft und Ausfuhrkontrolle)**
 
-- Federal Office for Economic Affairs and Export Control, manages various funding programs.
+- Bundesamt für Wirtschaft und Ausfuhrkontrolle, verwaltet verschiedene Förderprogramme.
 
 **EE-Mann (Energieeffizienz-Experte)**
 
-- Energy efficiency expert required to validate and approve certain climate/building projects for funding eligibility.
+- Energieeffizienz-Experte, der zur Validierung und Genehmigung bestimmter Klima-/Bauprojekte für Förderberechtigung erforderlich ist.
 
 **Klimafolgenschutzverein**
 
-- Climate Impact Protection Association (client organization), supports municipalities in accessing climate-related funding.
+- Klimafolgenschutzverein (Kundenorganisation), unterstützt Gemeinden beim Zugang zu klimabezogenen Förderungen.
 
 **Bürgermeister**
 
-- Mayor of a municipality, key decision-maker for project approvals.
+- Bürgermeister einer Gemeinde, wichtigster Entscheidungsträger für Projektgenehmigungen.
 
 **Kämmerer**
 
-- Municipal treasurer, responsible for financial planning and budget management.
+- Gemeindekämmerer, verantwortlich für Finanzplanung und Budgetverwaltung.
 
 **Digitalisierung**
 
-- Digitalization of municipal administrative processes and services.
+- Digitalisierung kommunaler Verwaltungsprozesse und -dienstleistungen.
 
 ---
 
-## Section 9: Evaluation Infrastructure (AI-Specific Testing)
+## Section 9: Evaluationsinfrastruktur (KI-Spezifisches Testen)
 
-### Test Datasets
+### Test-Datensätze
 
-- 
-### Success Metrics
+-
+### Erfolgsmetriken
 
-- 
-### Input/Output Specifications
+-
+### Eingabe/Ausgabe-Spezifikationen
 
-- **Input:** Questionnaire responses (structure TBD in Workshop 2\)  
-- **Output:** 2-3 funding programs with percentages and amounts (format TBD in Workshop 2\)
+- **Eingabe:** Fragebogen-Antworten (Struktur in Workshop 2 festzulegen)
+- **Ausgabe:** 2-3 Förderprogramme mit Prozentsätzen und Beträgen (Format in Workshop 2 festzulegen)
 
-### Validation Process
+### Validierungsprozess
 
-- **Validator:** Casa Curata UG (client) validates AI recommendations during POC  
-- **Method:** Client reviews search results based on their funding program knowledge
+- **Validierer:** Casa Curata UG (Kunde) validiert KI-Empfehlungen während POC
+- **Methode:** Kunde prüft Suchergebnisse basierend auf Förderprogramm-Kenntnissen
 
 
